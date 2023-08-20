@@ -2,6 +2,14 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
    const withdrawField = document.getElementById('withdraw-field');
    const newWithdrawAmountString = withdrawField.value;
    const newWithdrawAmount = parseFloat(newWithdrawAmountString);
+   withdrawField.value = "";
+
+   if(isNaN(newWithdrawAmount)){
+    alert('Please Provide a Valid Number');
+    return;
+   }
+
+
    const withdrawTotalElement = document.getElementById('withdraw-total');
    const previousWithdrawTotalString = withdrawTotalElement.innerText;
    const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
@@ -13,7 +21,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     const previousBalanceTotal = parseFloat(previousBalanceTotalString);
     const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
     balanceTotalElement.innerText = newBalanceTotal;
-    withdrawField.value = "";
+   
 
     if(newWithdrawAmount > previousBalanceTotal){
         alert('Baap er Account e Eto Taka Nai');
