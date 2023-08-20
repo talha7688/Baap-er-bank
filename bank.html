@@ -15,42 +15,50 @@
     </header>
     <main>
         <section class="mt-12">
-            <div class="md:grid grid-cols-3 lg:grid grid-cols-3 gap-4 w-9/12 mx-auto text-white">
-                <div class="bg-green-400 p-8 my-4 rounded-xl">
+            <div class="md:grid grid-cols-3 lg:grid grid-cols-3 gap-4 w-9/12 mx-auto">
+                <div class="bg-green-400 p-8 my-4 rounded-xl text-white">
                     <h4 class="font-bold text-3xl">Deposit</h4>
-                    <h2>$00</h2>
+                    <h2>$<span id="deposit-total">00</span></h2>
                 </div>
-                <div class="bg-blue-700 p-8 my-4 rounded-xl">
+                <div class="bg-blue-700 p-8 my-4 rounded-xl text-white">
                     <h4 class="font-bold text-3xl">Withdraw</h4>
-                    <h2>$00</h2>
+                    <h2 id="">$00</h2>
                 </div>
-                <div class="bg-red-400 p-8 my-4 rounded-xl">
+                <div class="bg-red-400 p-8 my-4 rounded-xl text-white">
                     <h4 class="font-bold text-3xl">Balance</h4>
-                    <h2>$1240</h2>
+                    <h2 id="">$1240</h2>
                 </div>
             </div>
         </section>
         <section>
             <div>
-                <div class="md:grid grid-cols-2 lg:grid grid-cols-2 gap-4 w-9/12 mx-auto text-white">
+                <div class="md:grid grid-cols-2 lg:grid grid-cols-2 gap-4 w-9/12 mx-auto">
                     <div class="bg-green-400 p-8 my-4 rounded-xl">
-                        <h4 class="font-bold text-3xl my-4">Please Deposit</h4>
-                        <input class="w-64 mb-2 px-3 rounded" type="email" placeholder="$ Annount you want to deopsit">
+                        <h4 class="font-bold text-3xl my-4   text-white">Please Deposit</h4>
+                        <input id="deposit-field" class="w-64 mb-2 px-3 rounded" type="text" placeholder="$ Amount you want to deopsit">
                         <br>
-                        <button id="btn-submit"
-                            class="mb-4 bg-blue-500 p-2 rounded font-semibold  hover:bg-violet-600">Submit</button>
+                        <button id="btn-deposit"
+                            class="mb-4 bg-blue-500 p-2 rounded font-semibold  hover:bg-violet-600   text-white">Deposit</button>
                     </div>
                     <div class="bg-blue-700 p-8 my-4 rounded-xl">
-                        <h4 class="font-bold text-3xl my-4">Please Withdraw</h4>
-                        <input class="w-64 mb-2 px-3 rounded" type="email" placeholder="$ Annount you want to withdraw">
+                        <h4 class="font-bold text-3xl my-4   text-white">Please Withdraw</h4>
+                        <input id="withdraw-field" class="w-64 mb-2 px-3 rounded" type="text" placeholder="$ Amount you want to withdraw">
                         <br>
-                        <button id="btn-submit"
-                            class="mb-4 bg-fuchsia-500 p-2 rounded font-semibold  hover:bg-violet-600">Submit</button>
+                        <button id="btn-withdraw"
+                            class="mb-4 bg-fuchsia-500 p-2 rounded font-semibold  hover:bg-violet-600   text-white">Withdraw</button>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+
+
+
+
+
+
+    <script src="./deposit.js"></script>
 </body>
 
 </html>
