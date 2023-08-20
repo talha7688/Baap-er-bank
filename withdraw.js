@@ -5,8 +5,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
    const withdrawTotalElement = document.getElementById('withdraw-total');
    const previousWithdrawTotalString = withdrawTotalElement.innerText;
    const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
-    const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
-    withdrawTotalElement.innerText = currentWithdrawTotal;
+    
 
 
     const balanceTotalElement = document.getElementById('balance-total');
@@ -15,4 +14,11 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
     balanceTotalElement.innerText = newBalanceTotal;
     withdrawField.value = "";
+
+    if(newWithdrawAmount > previousBalanceTotal){
+        alert('Baap er Account e Eto Taka Nai');
+        return;
+    }
+    const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
+    withdrawTotalElement.innerText = currentWithdrawTotal;
 })
